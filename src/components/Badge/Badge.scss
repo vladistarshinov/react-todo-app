@@ -1,0 +1,24 @@
+$status-colors: (
+    grey: #C9D1D3,
+    green: #42B883,
+    blue: #64C4ED,
+    pink: #FFBBCC,
+    lime: #B6E6BD,
+    purple: #C355F5,
+    black: #110133,
+    red: #FF6464
+);
+
+.badge {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+
+    @each $status, $color in $status-colors {
+        &--#{$status} {
+            background-color: $color;
+        }
+    }
+    
+  }
