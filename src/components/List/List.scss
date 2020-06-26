@@ -1,4 +1,5 @@
 .list {
+    $self: &;
     margin-bottom: 30px;
 
     &__add {
@@ -17,6 +18,26 @@
       align-items: center;
       cursor: pointer;
       padding: 10px 12px;
+
+      &:hover #{$self}__remove-icon {
+        opacity: .25;
+      }
+
+      #{$self}__remove-icon {
+        opacity: 0;
+  
+        &:hover {
+          opacity: .75;
+        }
+      }
+
+      span {
+        flex: 1;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, .4);
+      }
 
       &.active {
         background: #FFFFFF;
