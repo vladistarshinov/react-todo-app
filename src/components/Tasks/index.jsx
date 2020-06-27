@@ -33,7 +33,7 @@ const Tasks = () => {
                             </svg>
                         </label>
                     </div>
-                    <input value="Изучить JavaScript" />
+                    {/* <input value="Изучить JavaScript" /> */}
                 </div>
             </div>
         </div>
