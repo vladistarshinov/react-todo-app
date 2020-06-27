@@ -12,6 +12,7 @@ body {
 }
 
 .todo {
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -31,6 +32,10 @@ body {
     padding: 60px 15px;
   }
 
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
 }
 
 .field {
