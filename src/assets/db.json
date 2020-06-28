@@ -21,9 +21,19 @@
       "colorId": 2
     },
     {
-      "id": 5,
+      "name": "Спорт",
+      "colorId": 6,
+      "id": 6
+    },
+    {
+      "name": "Саморазвитие",
+      "colorId": 8,
+      "id": 7
+    },
+    {
       "name": "Личное",
-      "colorId": 1
+      "colorId": 1,
+      "id": 8
     }
   ],
   "tasks": [
@@ -50,12 +60,6 @@
       "listId": 2,
       "text": "Redux (redux-observable, redux-saga)",
       "completed": false
-    },
-    {
-      "listId": 2,
-      "text": "123",
-      "completed": true,
-      "id": 5
     }
   ],
   "colors": [
