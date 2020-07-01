@@ -45,6 +45,7 @@ body {
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 
   &:focus {
     border-color: #dbdbdb;
@@ -59,6 +60,7 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   transition: .5s all;
+  font-size: 14px;
 
   &:hover {
     background: darken(#4DD599, 5%);
@@ -66,5 +68,24 @@ body {
 
   &:active {
     background: darken(#4DD599, 12%);
+  }
+
+  &:disabled {
+    background: #d8d8d8;
+    
+  }
+
+  &--grey {
+    background: #e4e4e4;
+    color: #444444;
+    transition: .5s all;
+
+    &:hover {
+      background: darken(#e4e4e4, 5%);
+    }
+
+    &:active {
+      background: darken(#e4e4e4, 10%);
+    }
   }
 }

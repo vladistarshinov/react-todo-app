@@ -26,9 +26,19 @@ function App() {
     });
   }, []);
 
-  const onAddList = (obj) => {
+  const onAddList = obj => {
     const newList = [...lists, obj];
     setLists(newList);
+  };
+
+  const onAddTask = (listId, taskObj) => {
+    const newTasksList = lists.map(item => {
+      if (item.id === listId) {
+        item.tasks = [...item.tasks, taskObj];
+      }
+      return item;
+    });
+    setLists(newTasksList);
   };
 
   const onEditList = (id, title) => {
@@ -47,6 +57,7 @@ function App() {
         <List 
           items={[
             {
+              active: true,
               icon: (
                 <svg 
                   width="18" 
@@ -90,6 +101,7 @@ function App() {
         { lists && activeList && (
           <Tasks 
             list={activeList} 
+            onAddTask={onAddTask}
             editTitle={onEditList} 
           />
           ) 

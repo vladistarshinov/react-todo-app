@@ -3,9 +3,11 @@ import axios from 'axios';
 
 import editImg from '../../assets/img/edit.svg';
 
+import AddTask from './AddTask';
+
 import './Tasks.scss';
 
-const Tasks = ({ list, editTitle }) => {
+const Tasks = ({ list, editTitle, onAddTask }) => {
     
     const renameTitle = () => {
         const newTitle = window.prompt('Новое название списка', list.name);
@@ -29,7 +31,7 @@ const Tasks = ({ list, editTitle }) => {
             </h2>   
             <div className="tasks__items">
                 {!list.tasks.length && <h2>Задачи отсутствуют</h2>}
-                { list.tasks.map(task => 
+                { list.tasks.map(task => (
                     <div key={task.id} className="tasks__items-row">
                         <div className="checkbox">
                             <input id={`check-${task.id}`} type="checkbox" />
@@ -53,7 +55,8 @@ const Tasks = ({ list, editTitle }) => {
                         </div>
                         <input readOnly value={task.text} />
                     </div>
-                )}
+                ))}
+                <AddTask list={list} onAddTask={onAddTask} />
                 
             </div>
         </div>

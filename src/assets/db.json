@@ -21,11 +21,6 @@
       "colorId": 2
     },
     {
-      "name": "Спорт",
-      "colorId": 6,
-      "id": 6
-    },
-    {
       "name": "Саморазвитие",
       "colorId": 8,
       "id": 7
@@ -60,6 +55,30 @@
       "listId": 2,
       "text": "Redux (redux-observable, redux-saga)",
       "completed": false
+    },
+    {
+      "listId": 1,
+      "text": "fsdfdsf",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "listId": 1,
+      "text": "fdsfdsfdsfdsgds",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "listId": 1,
+      "text": "trest",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "listId": 1,
+      "text": "test",
+      "completed": false,
+      "id": 8
     }
   ],
   "colors": [
