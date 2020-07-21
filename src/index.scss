@@ -4,9 +4,6 @@
   list-style: none;
   outline: none;
   font-family: 'Roboto', -apple-system, system-ui, sans-serif;
-}
-
-body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,31 +13,67 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
   transform: translate(-50%, -50%);
-  width: 750px;
-  min-height: 530px;
   box-shadow: 1px 2px 20px #f3f3f3;
   border-radius: 10px;
   border: 1px solid #f1f1f1;
   font-size: 14px;
 
   &__sidebar {
-    background-color: #e5e5e5;
-    width: 220px;
+    background-color: #f4f6f8;
+    width: 230px;
     height: calc(100% - 120px);
     border-right: 1px solid #f1f1f1;
-    padding: 60px 15px;
+    padding: 60px 20px;
   }
 
   &__tasks {
     flex: 1;
     padding: 60px;
+    overflow: auto;
+  }
+}
+
+.button {
+  background: #4dd599;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: darken(#4dd599, 6%);
+  }
+
+  &:active {
+    background: darken(#4dd599, 10%);
+  }
+
+  &:disabled {
+    background: #d8d8d8;
+  }
+
+  &--grey {
+    background: #f4f6f8;
+    color: #444444;
+
+    &:hover {
+      background: darken(#f4f6f8, 3%);
+    }
+
+    &:active {
+      background: darken(#f4f6f8, 6%);
+    }
   }
 }
 
 .field {
-  background: #FFFFFF;
-  border: 1px solid #ebebeb;
+  background: #ffffff;
+  border: 1px solid #efefef;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 12px;
@@ -49,43 +82,5 @@ body {
 
   &:focus {
     border-color: #dbdbdb;
-  }
-}
-
-.button {
-  background: #4DD599;
-  border-radius: 4px;
-  color: #fff;
-  border: 0;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: .5s all;
-  font-size: 14px;
-
-  &:hover {
-    background: darken(#4DD599, 5%);
-  }
-
-  &:active {
-    background: darken(#4DD599, 12%);
-  }
-
-  &:disabled {
-    background: #d8d8d8;
-    
-  }
-
-  &--grey {
-    background: #e4e4e4;
-    color: #444444;
-    transition: .5s all;
-
-    &:hover {
-      background: darken(#e4e4e4, 5%);
-    }
-
-    &:active {
-      background: darken(#e4e4e4, 10%);
-    }
   }
 }
